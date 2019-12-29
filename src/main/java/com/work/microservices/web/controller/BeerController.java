@@ -16,7 +16,6 @@ import java.util.UUID;
 @RestController
 public class BeerController {
 
-    @Autowired
     private final BeerService beerService;
 
     public BeerController(BeerService beerService) {
