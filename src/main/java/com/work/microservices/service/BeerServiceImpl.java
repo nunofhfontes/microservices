@@ -1,12 +1,16 @@
 package com.work.microservices.service;
 
 import com.work.microservices.web.model.BeerDto;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.UUID;
 
 //BeerService
 
+@Slf4j
 @Service
 public class BeerServiceImpl implements BeerService {
 
@@ -33,6 +37,13 @@ public class BeerServiceImpl implements BeerService {
 
         //TODO - implement this service
         return beerDto;
+    }
+
+    @Override
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteById(UUID beerId) {
+
+        log.debug("Deleting a beer with id: " + beerId.toString());
     }
 
 }
