@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import java.net.URI;
 import java.util.UUID;
 
 //BeerService
@@ -30,6 +31,11 @@ public class BeerServiceImpl implements BeerService {
                 .beerName("")
                 .upc(null)
                 .build();
+    }
+
+    @Override
+    public URI saveBeer(BeerDto beerDto) {
+        return URI.create("New resource string");
     }
 
     @Override
