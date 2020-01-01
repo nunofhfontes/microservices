@@ -46,6 +46,11 @@ public class BeerServiceImpl implements BeerService {
     }
 
     @Override
+    public URI updateSavedBeer(BeerDto beerDto) {
+        return null;
+    }
+
+    @Override
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteById(UUID beerId) {
 
